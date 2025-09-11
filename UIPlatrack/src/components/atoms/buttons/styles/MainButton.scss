@@ -1,0 +1,27 @@
+.main-button{
+    @include flex-center;
+    width: 100px;
+    border: 1px solid $border-accent-red;
+    border-radius: 8px;
+    background-color: $red-main;
+    font-size: 14px;
+    color: $white;
+    height: 40px;
+    box-shadow: 0 4px 6px rgba(255, 88, 88, 0.15);
+
+   &:hover {
+        background-color: $red-hover;
+        box-shadow: 0 6px 10px rgba(255, 88, 88, 0.2);
+    }
+
+    &:focus {
+        background-color: $red-focus;
+        box-shadow: 0 6px 12px rgba(255, 88, 88, 0.25);
+    }
+
+    @include respond(sm){
+        height: 35px;
+        width: 80px;
+        font-size: 12px;
+    }
+}

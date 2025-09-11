@@ -1,0 +1,37 @@
+.user-review-card {
+    @include flex-center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    background: $card-background;
+    border: 1px solid $card-background;
+    border-radius: 5px;
+    padding: 8px;
+    height: fit-content;
+
+    .user-review-username {
+        font-size: 16px;
+        font-weight: 600;
+        color: $text-light;
+    }
+
+    .user-review-stars {
+        display: flex;
+        gap: 4px;
+
+        .star {
+        font-size: 20px;
+        color: $background-base; 
+        &.active {
+            color: $red-main;
+        }
+        }
+    }
+
+    .user-review-comment {
+        font-size: 12px;
+        line-height: 1.5;
+        font-weight: 400;
+        color: $text-light;
+    }
+}

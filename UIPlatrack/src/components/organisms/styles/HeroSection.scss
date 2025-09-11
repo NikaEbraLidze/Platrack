@@ -1,0 +1,15 @@
+.hero-section{
+    @include flex-center;
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 100px;
+
+    .hero-cta-container{
+        @include flex-center;
+        gap: 8px;
+    }
+
+    @include respond(sm){
+        padding-top: 44px;
+    }
+}

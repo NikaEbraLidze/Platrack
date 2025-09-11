@@ -1,0 +1,25 @@
+.subscribe-input {
+  width: 100%;
+  min-height: 50px;
+  padding: 10px 12px;
+  border: 1px solid $text-light;
+  border-radius: 8px;
+  background-color: $card-background;
+  color: $text-light;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: none;
+  transition: all 0.2s ease;
+
+  &::placeholder {
+    color: $text-muted;
+    font-size: 14px;
+  }
+
+  &:focus {
+    border: 1px solid $red-main;
+    box-shadow: 0 0 0 3px rgba($red-main, 0.2);
+    outline: none;
+  }
+}

@@ -1,0 +1,40 @@
+.plat-card-content {
+  @include flex-center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  text-align: left;
+  z-index: 99999;
+  width: 100%;
+  height: auto;
+
+  h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: $text-light;
+  }
+
+  p {
+    font-size: 12px;
+    font-weight: 400;
+    color: $text-muted;
+  }
+
+  &.plat-card-content-tiktok {
+    background-color: #000000cc;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+  }
+
+  &.plat-card-content-spotify {
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    width: 80%;
+    bottom: 30px;
+    background-color: #000000cc;
+    padding: 10px;
+    border-radius: 2px;
+  }
+}

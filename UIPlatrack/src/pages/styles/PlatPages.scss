@@ -1,0 +1,7 @@
+.plat-pages {
+  @include flex-center;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 24px;
+  padding: 0 20px 32px;
+}

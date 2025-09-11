@@ -1,0 +1,29 @@
+// Base Colors
+$red-main: #f51c1c;
+$white: #ffffff;
+$white-transparent-60: #ffffff99;
+
+// hover 
+$red-hover: #e11a1a;
+// focus
+$red-focus: #f51c1c66;
+
+$gray-light: #c3c6c9;
+$gray-medium: #6e6e6e;
+$gray-dark: #343437;
+
+// Background Colors
+$background-base: #1f2022;
+$background-dark: #171719;
+
+// Text Colors
+$text-light: $white;
+$text-muted: $gray-light;
+$text-light-transparent: $white-transparent-60;
+
+// Card Colors
+$card-background: $gray-dark;
+
+// Borders
+$border-light-gray: 1px solid $gray-medium;
+$border-accent-red: 1px solid $red-main;

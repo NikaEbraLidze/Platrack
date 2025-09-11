@@ -1,0 +1,10 @@
+.plat-search-img {
+    @include flex-center;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+
+    img {
+        object-fit: cover;
+    }
+}

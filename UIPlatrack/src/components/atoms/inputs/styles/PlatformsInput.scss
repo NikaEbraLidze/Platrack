@@ -1,0 +1,37 @@
+.platforms-input{
+    @include flex-center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 700px;
+    background-color: $card-background;
+    padding: 10px;
+    border-radius: 8px;
+    height: auto;
+
+    input{
+        width: 100%;
+        font-size: 20px;
+        color: $text-muted;
+        border: none;
+        background-color: $card-background;
+
+        &:focus{
+            border: none;
+        }
+
+        &::placeholder{
+            font-size: 20px;
+            color: $text-muted;
+        }
+    }
+
+    button{
+        border: none;
+        background-color: $card-background;
+        width: auto;
+        height: auto;
+        img{
+            width: 50px;
+        }
+    }    
+}

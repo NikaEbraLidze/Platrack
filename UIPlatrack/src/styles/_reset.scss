@@ -1,0 +1,96 @@
+/* ==========================================================================
+   Reset Styles
+   ========================================================================== */
+
+// Universal Box-Sizing
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Base html and body reset
+html, body {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: #f2f2f2;
+  color: #1a1a1a;
+  line-height: 1.5;
+}
+
+// Remove default list styles
+ul, ol {
+  list-style: none;
+}
+
+// Anchor tags reset
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+// Button & input reset
+button, input, select, textarea {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+// Buttons default cursor
+button {
+  cursor: pointer;
+}
+
+// Images and media
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  display: block;
+}
+
+// Form elements autofill fix
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+// Tables reset
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Headings reset
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+// Blockquotes & quotes
+blockquote, q {
+  quotes: none;
+}
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+}
+
+// Strong/bold normalization
+strong {
+  font-weight: bold;
+}

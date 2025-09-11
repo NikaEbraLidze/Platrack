@@ -1,0 +1,16 @@
+.loading,
+.backend-error-message {
+  @include flex-center;
+  flex-direction: column;
+  padding: 100px 0px;
+  gap: 24px;
+
+  img {
+    width: 100px;
+  }
+
+  p {
+    font-size: 18px;
+    color: $text-light;
+  }
+}

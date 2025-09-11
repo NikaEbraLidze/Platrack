@@ -1,0 +1,12 @@
+.h-i-w-card{
+    @include flex-center;
+    height: 400px;
+    width: auto;
+    border: $border-light-gray;
+    border-radius: 12px;
+    padding: 2px;
+
+    img{
+        object-fit: cover;
+    }
+}

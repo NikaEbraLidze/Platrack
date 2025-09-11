@@ -1,0 +1,14 @@
+.user-rating{
+    @include flex-center;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    gap: 16px;
+
+    .star-rating-container{
+        @include flex-center;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+}

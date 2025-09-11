@@ -1,0 +1,9 @@
+.reviews{
+    @include flex-center;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 710px;
+    padding: 100px 20px;
+    padding-top: 20px;
+}

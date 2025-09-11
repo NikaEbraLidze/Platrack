@@ -1,0 +1,21 @@
+.footer-content{
+    @include flex-center;
+    gap: 16px;
+    font-size: 14px;
+    color: $text-light-transparent;
+
+    img{
+        opacity: 0.6;
+        width: 35px;
+    }
+
+    h2{
+        font-size: 16px;
+        color: $text-light-transparent;
+    }
+}
+
+.copyright{
+    font-size: 14px;
+    color: $text-light-transparent;
+}

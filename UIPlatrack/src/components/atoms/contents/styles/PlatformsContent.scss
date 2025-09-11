@@ -1,0 +1,33 @@
+.platforms-content{
+    @include flex-center;
+    gap: 16px;
+    flex-direction: column;
+    padding: 56px 0 32px;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+
+    h1{
+        font-size: 36px;
+        color: $text-light;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    p{
+        font-size: 16px;
+        color: $text-muted;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    @include respond(sm){
+        h1{
+            font-size: 28px;
+        }
+
+        p{
+            font-size: 14px;
+        }
+    }
+}

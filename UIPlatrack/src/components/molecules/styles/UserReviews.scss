@@ -1,0 +1,17 @@
+.user-reviews {
+  @include flex-center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+
+  .swiper {
+    width: 100%;
+  }
+
+  .review-slide {
+    width: auto;
+    max-width: 500px; 
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,30 @@
+.search-platforms{
+    @include flex-center;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: auto;
+    max-width: 100%;
+    padding: 100px;
+    overflow: hidden;
+
+    @include respond(sm){
+        padding: 100px 20px;
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 16px;
+  height: 16px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 10px;
+  color: white;
+}

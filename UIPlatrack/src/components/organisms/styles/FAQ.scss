@@ -1,0 +1,30 @@
+.faq {
+  @include flex-center;
+  flex-direction: column;
+  gap: 32px;
+  padding: 100px 20px;
+
+  .faq-container {
+    border: $border-light-gray;
+    border-radius: 10px;
+    width: 670px;
+    @include flex-center;
+    flex-direction: column;
+
+    .faq-item {
+      width: 100%;
+    }
+
+    .line {
+      width: 100%;
+      height: 1px;
+      background-color: $gray-medium;
+    }
+  }
+
+  @include respond(sm){
+    .faq-container{
+        width: 100%;
+    }
+  }
+}

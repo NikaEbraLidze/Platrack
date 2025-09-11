@@ -1,0 +1,50 @@
+.faq-question-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 12px;
+  gap: 8px;
+
+  .question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%;
+    background: transparent;
+    border: none;
+    text-align: left;
+
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+      color: $text-light;
+      margin: 0;
+    }
+
+    .arrow {
+      transition: transform 0.3s ease;
+      &.rotated {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .answer-paragraph {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+    margin: 0;
+    
+    &.active {
+      max-height: 200px; // დააყენეთ საკმარისად დიდი ზომა
+      opacity: 1;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    color: $text-light-transparent;
+  }
+}

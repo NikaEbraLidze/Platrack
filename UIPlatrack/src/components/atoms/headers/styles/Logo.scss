@@ -1,0 +1,24 @@
+.logo{
+    @include flex-center;
+    gap: 5px;
+    cursor: pointer;
+
+    img{
+        width: 50px;
+    }
+
+    h2{
+        font-size: 32px;
+        color: $text-light;
+    }
+
+    @include respond(sm){
+        img{
+            width: 40px;
+        }
+
+        h2{
+            font-size: 24px;
+        }
+    }
+}

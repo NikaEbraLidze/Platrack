@@ -1,0 +1,25 @@
+.faq-content{
+    @include flex-center;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+
+    h2{
+        font-size: 36px;
+        color: $text-light;
+        font-weight: 700;
+
+        span{
+            color: $red-main;
+        }
+    }
+
+    p{
+        color: $gray-light;
+        font-size: 14px;
+    }
+
+    @include respond(sm){
+        h2{font-size: 32px;}
+    }
+}

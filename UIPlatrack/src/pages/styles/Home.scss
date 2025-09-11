@@ -1,0 +1,6 @@
+.home-page{
+    @include flex-center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1500px;
+}

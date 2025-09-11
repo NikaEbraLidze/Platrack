@@ -1,0 +1,22 @@
+@use "./reset";
+@use "../assets/fonts/fonts";
+@use "@/styles/variables" as *;
+
+body {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+#root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $background-base;
+  min-height: 100vh;
+}
+
+::selection {
+  color: $text-light;
+  background-color: $red-focus;
+}

@@ -1,0 +1,22 @@
+.h-i-w-btn{
+    @include flex-center;
+    border: $border-light-gray;
+    font-size: 14px;
+    font-weight: 700;
+    height: 56px;
+    width: auto;
+    color: $text-light;
+    border-radius: 12px;
+
+    @include respond(sm){
+       font-size: 12px;
+    }
+
+    img{
+        width: 24px;
+    }
+}
+
+.h-i-w-btn-active{
+    background-color: $gray-dark;
+}

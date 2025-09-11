@@ -1,0 +1,39 @@
+.hero-cta {
+  @include flex-center;
+  border: $border-accent-red;
+  font-size: 14px;
+  height: 56px;
+  width: 184px;
+  color: $text-light;
+  border-radius: 8px;
+
+  &:hover {
+      box-shadow: 0 6px 10px rgba(255, 88, 88, 0.2);
+  }
+
+  &:focus {
+      box-shadow: 0 6px 12px rgba(255, 88, 88, 0.25);
+  }
+
+  @include respond(xs){
+    height: 40px;
+    width: 140px;
+    font-size: 12px;
+  }
+}
+
+.hero-cta.explore {
+  background-color: $gray-dark;
+}
+
+.hero-cta.search-now {
+  background-color: $red-main;
+  
+  &:hover {
+      background-color: $red-hover;
+  }
+
+  &:focus {
+      background-color: $red-focus;
+  }
+}

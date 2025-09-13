@@ -46,3 +46,21 @@ CREATE TABLE search_logs (
     ip_address INET NOT NULL,
     created_at TIMESTAMP DEFAULT NOW()
 );
+
+CREATE TABLE reviews (
+    id BIGSERIAL PRIMARY KEY,
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    guest_id BIGINT REFERENCES guests(id) ON DELETE CASCADE,
+    rating INT NOT NULL CHECK (rating BETWEEN 1 AND 5),
+    comment TEXT,
+    created_at TIMESTAMP DEFAULT NOW(),
+    review_date DATE GENERATED ALWAYS AS (created_at::DATE) STORED,
+    -- Ensure at least one of user_id or guest_id is present
+    CONSTRAINT user_or_guest CHECK (
+        (user_id IS NOT NULL AND guest_id IS NULL) OR 
+        (guest_id IS NOT NULL AND user_id IS NULL)
+    ),
+    -- Now we can use review_date safely
+    CONSTRAINT unique_user_review_per_day UNIQUE (user_id, review_date),
+    CONSTRAINT unique_guest_review_per_day UNIQUE (guest_id, review_date)
+);

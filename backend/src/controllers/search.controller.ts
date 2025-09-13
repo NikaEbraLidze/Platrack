@@ -1,13 +1,13 @@
 import { Request, Response } from "express";
 import { searchYouTubeVideos } from "../services/search.youtube.js";
-import { addSearchLog } from "../models/searchLogs.js";
+import { addSearchLog } from "../models/Logs.js";
 import {
   getUserSearchCount,
   getGuestSearchCount,
 } from "../models/searchLimits.js";
 
 export async function SearchYoutubeController(req: Request, res: Response) {
-  const keyword = req.body.q || req.query.q; // შეგიძლიათ მიიღოთ GET ან POST
+  const keyword = req.body.q || req.query.q;
   const currentUser = (req as any).currentUser;
   // currentUser.type = "user" | "guest"
   // currentUser.id = userId ან guestId

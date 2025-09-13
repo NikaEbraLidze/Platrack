@@ -60,3 +60,32 @@ export async function getSearchLogsByGuest(
   );
   return result.rows;
 }
+
+export interface ReviewInput {
+  user_id?: string;
+  guest_id?: number;
+  rating: number;
+  comment?: string;
+}
+
+export async function insertReview({
+  user_id,
+  guest_id,
+  rating,
+  comment,
+}: ReviewInput): Promise<number> {
+  if ((!user_id && !guest_id) || (user_id && guest_id)) {
+    throw new Error("One and only one of user_id or guest_id must be set");
+  }
+
+  try {
+    const result = await db.query(
+      `INSERT INTO reviews (user_id, guest_id, rating, comment) VALUES ($1, $2, $3, $4) RETURNING id;`,
+      [user_id, guest_id, rating, comment]
+    );
+
+    return result.rowCount ?? 0;
+  } catch (error) {
+    throw new Error((error as Error).message);
+  }
+}

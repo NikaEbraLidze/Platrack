@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import searchRouter from "./routes/search.routes.js";
+import insertReviewRoute from "./routes/review.routes.js";
 
 const app = express();
 app.set("trust proxy", true);
@@ -11,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.get("/", (_req, res) => res.send("Backend running 🚀"));
 app.use("/search", searchRouter);
+app.use("/insert", insertReviewRoute);
 
 app.use((req, res) => {
   res.status(404).json({ error: "Route not found." });
